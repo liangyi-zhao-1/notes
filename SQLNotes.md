@@ -6,3 +6,8 @@
 ## when the index is useful
 - if the main search param is the index
   
+## Use UNION ALL when query has OR
+
+## When query with optional params
+1. Separate each param to one UNION ALL
+2. Use OPTION(RECOMPILE)
