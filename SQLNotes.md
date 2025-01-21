@@ -11,3 +11,19 @@
 ## When query with optional params
 1. Separate each param to one UNION ALL
 2. Use OPTION(RECOMPILE)
+
+
+## Date
+### Add Date
+```SQL
+-- MySQL
+DATE_ADD('2025-10-11', INTERVAL 1 DAY)
+DATE_SUB('2025-11-12', INTERVAL 1 DAY)
+-- MS SQL
+DATEADD(DAY, -1, '2025-11-12')
+```
+
+## Rounding
+```SQL
+ROUND(123.45, -2) --100.00
+```
