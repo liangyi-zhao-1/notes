@@ -19,3 +19,4 @@ bool IsTrue() {
 }
 </script>
 This is used to include additional members (methods etc.) to the class generated from the ASP.NET markup. These have only ever been provided "primarily to preserve backward compatibility with older ASP technology" and are not recommended for use.
+https://stackoverflow.com/questions/649428/asp-net-special-tags
