@@ -251,6 +251,11 @@ public class CustomerInstructionAmlDetailsWriter : DataAccessBase, ICustomerInst
     }
 ```
 
+# FTP
+Renci.SshNet
+https://sshnet.github.io/SSH.NET/api/Renci.SshNet.html
+https://sshnet.github.io/SSH.NET/examples.html
+
 # Keypoints
 ## Service lifetimes
 Singletons - These may exist for the entire application wide configuration setting, for example a game manager that keeps track of players progress throughout the game.
