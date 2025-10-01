@@ -251,6 +251,27 @@ public class CustomerInstructionAmlDetailsWriter : DataAccessBase, ICustomerInst
     }
 ```
 
+# Converter
+```cs
+    internal sealed class BankCountryCodeConverter : IConversionProvider<CountryCode>
+    {
+        public bool CanConvert(object legacyObject)
+        {
+            return legacyObject.ToString() == string.Empty || Enum.IsDefined(typeof(CountryCode), legacyObject);
+        }
+
+        public CountryCode ToDtoProperty(object legacySource)
+        {
+            return (CountryCode)Enum.Parse(typeof(CountryCode), legacySource.ToString(), true);
+        }
+
+        public object FromDtoProperty(CountryCode source)
+        {
+            return source.ToString();
+        }
+    }
+```
+
 # FTP
 Renci.SshNet
 https://sshnet.github.io/SSH.NET/api/Renci.SshNet.html
