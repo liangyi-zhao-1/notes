@@ -7,3 +7,18 @@ log on Clear, and navigate to Deals > managed fund > pre-pooled order to pool or
 navigate to Deals > managed fund > pooled order to place order
 on Clear DB, trigger 151857 to send message to oneX to place oneX's order
 on Clear, complete order and authorise completion, trigger 151857 again to send order confirmation info back to OneX to complete order
+
+Get instruction, account hierarchy ID, product IDs, holdings
+If SmartSwitch -> Process SmartSwitch
+If switch version == 3 -> Create V3 switch
+### OptimisedSwitch
+Get optimisedAllocations
+foreach optimisedAllocations, Prepare sellInstructions and buyInstructions
+#### ProcessSwitchRequest
+OptimiseSwitchRequest
+CreateSwitchRequestsBatch
+LogOriginalSwitchRequest
+ProcessSwitchRequestBatch => CreateOrders
+1. _sellOrderCreator.CreateOrder
+***
+SubmitInstruction
